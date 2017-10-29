@@ -35,7 +35,7 @@ func GetAllLinks(markdown string) map[string]string {
 	scanner := bufio.NewScanner(strings.NewReader(markdown))
 	// scans line by line
 	for scanner.Scan() {
-		// apply regex
+		// make regex
 		matches := re.FindAllStringSubmatch(scanner.Text(), -1)
 
 		// only apply regex if there are links
@@ -44,6 +44,15 @@ func GetAllLinks(markdown string) map[string]string {
 		}
 	}
 	return m
+}
+
+// ParseMarkdownURL parses an URL and grabs all markdown links from it.
+func ParseMarkdownURL(URL string) (map[string]string, error) {
+	file, err := DownloadURL(URL)
+	if err != nil {
+		return make(map[string]string), err
+	}
+	return GetAllLinks(file), nil
 }
 
 // readFile returns contents of the file.
