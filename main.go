@@ -1,5 +1,5 @@
-// Package markdown-parser provides methods to grab all links from markdown files.
-package markdown-parser
+// Package markdown_parser provides methods to grab all links from markdown files.
+package markdown_parser
 
 import (
 	"bufio"
