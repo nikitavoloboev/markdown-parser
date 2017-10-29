@@ -1,4 +1,5 @@
-package main
+// Package markdown-parser provides methods to grab all links from markdown files.
+package markdown-parser
 
 import (
 	"bufio"
@@ -54,10 +55,4 @@ func readFile(filename string) string {
 		fmt.Print(err)
 	}
 	return string(b)
-}
-
-func main() {
-	markdownFile := DownloadURL("https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md")
-	result := GetAllLinks(markdownFile)
-	fmt.Println(result["Spanish"])
 }
