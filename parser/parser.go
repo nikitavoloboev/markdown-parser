@@ -6,24 +6,22 @@ import (
 	"bytes"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"regexp"
 	"strings"
 )
 
 // DownloadURL returns Body response from the URL.
-func DownloadURL(URL string) string {
+func DownloadURL(URL string) (string, error) {
 	response, err := http.Get(URL)
 	if err != nil {
-		log.Fatal(err)
-	} else {
-		defer response.Body.Close()
-		buf := new(bytes.Buffer)
-		buf.ReadFrom(response.Body)
-		return buf.String()
+		return "", err
 	}
-	return "test"
+
+	defer response.Body.Close()
+	buf := new(bytes.Buffer)
+	buf.ReadFrom(response.Body)
+	return buf.String(), nil
 }
 
 // GetAllLinks returns all links and their names from a given markdown file.
