@@ -10,3 +10,6 @@ With a [correctly configured](https://golang.org/doc/install#testing) Go toolcha
 
 ## Examples 📌
 You can see this library being used in [Aflred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome list](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
+
+## Thanks 🍀
+You can support what I do on [Patreon](https://www.patreon.com/nikitavoloboev) or look [into other repositories](https://my.mindnode.com/ZKGETDkUaQUsL3q8q9z788CxG84oEHgDiT79GuzX#-143.5,-902.6,0) I shared. Thank you. 💚
