@@ -3,6 +3,8 @@
 ## Description 📕
 This is a simple Go library that will parse a given markdown file and grab all links from it and put it into a hashmap `map[string]string` to use.
 
+See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) for documentation.
+
 ## Install 💎
 With a [correctly configured](https://golang.org/doc/install#testing) Go toolchain :
 
