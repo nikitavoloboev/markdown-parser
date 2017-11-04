@@ -24,6 +24,11 @@ func DownloadURL(URL string) (string, error) {
 	return buf.String(), nil
 }
 
+// startsWithSlash checks if string starts with a slash.
+func startsWithSlash(line string) bool {
+	return strings.HasPrefix(line, "#")
+}
+
 // GetAllLinks returns all links and their names from a given markdown file.
 func GetAllLinks(markdown string) map[string]string {
 	// holds all the links and their corresponding values
