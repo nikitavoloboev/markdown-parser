@@ -2,9 +2,11 @@ package parser
 
 import "testing"
 
-func TeststartsWithSlash(t *testing.T) {
+func TestStartsWithSlash(t *testing.T) {
 	v := "# Intro"
-	if startsWithSlash(v) != true {
-		t.Error("Expected True, got ", startsWithSlash(v))
+	result := startsWithSlash(v)
+	expected := true
+	if expected != result {
+		t.Errorf("expected %v, got %v", expected, result)
 	}
 }
