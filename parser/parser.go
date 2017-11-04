@@ -24,8 +24,8 @@ func DownloadURL(URL string) (string, error) {
 	return buf.String(), nil
 }
 
-// startsWithSlash checks if string starts with a slash.
-func startsWithSlash(line string) bool {
+// startsWithSlash checks if string starts with a hash.
+func startsWithHash(line string) bool {
 	return strings.HasPrefix(line, "#")
 }
 
