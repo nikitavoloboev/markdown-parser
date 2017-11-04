@@ -10,9 +10,3 @@ func TestStartsWithHash(t *testing.T) {
 		t.Errorf("expected %v, got %v", expected, result)
 	}
 }
-
-// func TestDownloadURL(t *testing.T)  {
-// 	v := "https://raw.githubusercontent.com/nikitavoloboev/markdown-parser/master/readme.md"
-// 	result := DownloadURL(v)
-
-// }
