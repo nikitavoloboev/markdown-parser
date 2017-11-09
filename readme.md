@@ -6,7 +6,7 @@ This is a simple Go library that will parse a given markdown file and grab all l
 See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) for documentation.
 
 ## Install 
-If you have [Go](https://golang.org/dl/) installed, simply run :
+If you have [Go](https://golang.org/dl/) installed, run :
 
 `go get -u github.com/nikitavoloboev/markdown-parser/parser`
 
