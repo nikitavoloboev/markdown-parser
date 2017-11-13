@@ -1,7 +1,7 @@
 # Markdown Parser [![GoDoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser?status.svg)](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) [![Thanks](https://img.shields.io/badge/Say%20Thanks-💗-ff69b4.svg)](https://www.patreon.com/nikitavoloboev) 
 > Go library to parse markdown to grab various things
 
-This is a simple Go library that will parse a given markdown file and grab all links from it and put it into a hashmap `map[string]string` to use.
+This library will parse a given markdown file and grab all links from it and put it into a hashmap `map[string]string` to use.
 
 See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) for documentation.
 
