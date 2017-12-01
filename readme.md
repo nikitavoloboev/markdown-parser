@@ -4,7 +4,7 @@
 This library will parse a given markdown file and grab all links from it and put it into a hashmap `map[string]string` to use.
 
 ## Installing
-If you have [Go](https://golang.org/dl/) installed, run:
+If you have [Go](https://golang.org/doc/install) installed, run:
 
 `go get github.com/nikitavoloboev/markdown-parser/parser`
 
