@@ -15,7 +15,7 @@ See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) 
 You can see this library being used in [Aflred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome lists](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
 
 ## Contributing
-Contributions are welcome! Look into [issues](https://github.com/nikitavoloboev/markdown-parser/issues) and see if anything sparks your interest or [add ideas of your own](https://github.com/nikitavoloboev/markdown-parser/issues).
+Contributions are welcome! Look into [issues](https://github.com/nikitavoloboev/markdown-parser/issues) and see if anything sparks your interest or [add ideas of your own](https://github.com/nikitavoloboev/markdown-parser/issues/new).
 
 ## Thank you 💜
 You can support what I do on [Patreon](https://www.patreon.com/nikitavoloboev) or look [into other repositories](https://my.mindnode.com/ZKGETDkUaQUsL3q8q9z788CxG84oEHgDiT79GuzX#-143.5,-902.6,0) I shared. 
