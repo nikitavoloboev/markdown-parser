@@ -3,13 +3,12 @@
 
 This library will parse a given markdown file and grab all links from it and put it into a hashmap `map[string]string` to use.
 
-## Installing
+## Install
 `go get -u github.com/nikitavoloboev/markdown-parser/parser`
 
-## Documentation
+## Usage
 See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) for documentation.
 
-## Usage
 You can see this library being used in [Aflred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome lists](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
 
 ## Contributing
