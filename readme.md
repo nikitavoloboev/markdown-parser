@@ -12,7 +12,7 @@ See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) 
 You can see this library being used in [Aflred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome lists](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
 
 ## Contributing
-[Suggestions](https://github.com/nikitavoloboev/markdown-parser/issues) and pull requests are highly encouraged!
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Thank you 💜
 You can support what I do on [Patreon](https://www.patreon.com/nikitavoloboev) or look into [other projects](https://nikitavoloboev.xyz/projects) I shared.
