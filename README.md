@@ -9,7 +9,7 @@ This library will parse a given markdown file and grab all links from it and put
 ## Usage
 See [Godoc](https://godoc.org/github.com/nikitavoloboev/markdown-parser/parser) for documentation.
 
-You can see this library being used in [Aflred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome lists](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
+You can see this library being used in [Alfred Awesome Lists](https://github.com/nikitavoloboev/alfred-awesome-lists) to grab all links from [Sindre's awesome lists](https://github.com/sindresorhus/awesome) and filter the results in Alfred.
 
 ## Contributing
 See [contribution guidelines](CONTRIBUTING.md#readme).
