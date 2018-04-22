@@ -15,7 +15,7 @@ You can see this library being used in [Alfred Awesome Lists](https://github.com
 See [contribution guidelines](CONTRIBUTING.md#readme).
 
 ## Thank you 💜
-You can support what I do on [Patreon](https://www.patreon.com/nikitavoloboev) or look into [other projects](https://nikitavoloboev.xyz/projects) I shared.
+You can support me on [Patreon](https://www.patreon.com/nikitavoloboev) or look into [other projects](https://nikitavoloboev.xyz/projects) I shared.
 
 ## License
 MIT © [Nikita Voloboev](https://www.nikitavoloboev.xyz)
