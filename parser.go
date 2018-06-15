@@ -3,9 +3,11 @@ package parser
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"log"
+	"net/http"
 	"regexp"
 	"strings"
 )
@@ -65,14 +67,27 @@ func ParseMarkdownFile(fileName string) (map[string]string, error) {
 	return GetAllLinks(file), nil
 }
 
+// DownloadURL returns Body response from the URL.
+func DownloadURL(URL string) (string, error) {
+	resp, err := http.Get(URL)
+	if err != nil {
+		return "", err
+	}
+
+	defer resp.Body.Close()
+	buf := new(bytes.Buffer)
+	buf.ReadFrom(resp.Body)
+	return buf.String(), nil
+}
+
 // ParseMarkdownURL parses an URL and returns all markdown links from it.
-// func ParseMarkdownURL(URL string) (map[string]string, error) {
-// 	file, err := DownloadURL(URL)
-// 	if err != nil {
-// 		return make(map[string]string), err
-// 	}
-// 	return GetAllLinks(file), nil
-// }
+func ParseMarkdownURL(URL string) (map[string]string, error) {
+	file, err := DownloadURL(URL)
+	if err != nil {
+		return make(map[string]string), err
+	}
+	return GetAllLinks(file), nil
+}
 
 // readFile returns contents of the file.
 func readFile(filename string) string {
