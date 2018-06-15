@@ -6,19 +6,14 @@ import (
 	"testing"
 )
 
+func assert(tb testing.TB, condition bool, msg string)
+func ok(tb testing.TB, err error)
+func equals(tb testing.TB, exp, act interface{})
+
 func TestParseLinkWithDescription(t *testing.T) {
-	v := "- [The art of computer programming (1968)](http://www.goodreads.com/book/show/112239.The_Art_of_Computer_Programming_Volumes_1_3_Boxed_Set)"
+	v := "- [Effective Go](https://golang.org/doc/effective_go.html) - Amazing doc."
 	ParseLinkWithDescription(v)
 	// result := TestParseLinkWithDescription(v)
-}
-
-func TestStartsWithHash(t *testing.T) {
-	v := "# Intro"
-	result := startsWithHash(v)
-	expected := true
-	if expected != result {
-		t.Errorf("expected %v, got %v", expected, result)
-	}
 }
 
 func TestParseMarkdownFile(t *testing.T) {
