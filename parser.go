@@ -12,10 +12,10 @@ import (
 	"strings"
 )
 
-// ParseLinkWithDescription parses a line and grabs the Link, Title and the Description attached to it.
+// ParseLink parses a line and grabs the Link, Title and the Description attached to it.
 // The format of the line should be as follows: `- [Title](Link) - Description`.
 // Description can be omitted.
-func ParseLinkWithDescription(line string) map[string]string {
+func ParseLink(line string) map[string]string {
 	// Holds all the title, link, and description
 	m := make(map[string]string)
 
