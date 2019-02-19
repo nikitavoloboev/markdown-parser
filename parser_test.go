@@ -16,7 +16,7 @@ func TestParseLinkWithDescription(t *testing.T) {
 	assert.Equal(result["Description"], "Amazing doc.", "Check to see if the description is correct")
 }
 
-func TestParseLink(t *testing.T) {
+func TestParseLinkWithoutDescription(t *testing.T) {
 	assert := assert.New(t)
 	v := "- [Effective Go](https://golang.org/doc/effective_go.html)"
 	result := ParseLinkWithDescription(v)
