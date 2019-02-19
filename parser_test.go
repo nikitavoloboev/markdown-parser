@@ -2,24 +2,24 @@ package parser
 
 import (
 	"fmt"
-	"log"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func assert(tb testing.TB, condition bool, msg string)
-func ok(tb testing.TB, err error)
-func equals(tb testing.TB, exp, act interface{})
-
 func TestParseLinkWithDescription(t *testing.T) {
+	assert := assert.New(t)
 	v := "- [Effective Go](https://golang.org/doc/effective_go.html) - Amazing doc."
-	ParseLinkWithDescription(v)
-	// result := TestParseLinkWithDescription(v)
+	result := ParseLinkWithDescription(v)
+	assert.Equal(result["Title"], "Effective Go", "Check to see if the title is correct")
+	assert.Equal(result["Link"], "https://golang.org/doc/effective_go.html", "Check to see if the link is correct")
+	assert.Equal(result["Description"], "Amazing doc.", "Check to see if the description is correct")
 }
 
 func TestParseMarkdownFile(t *testing.T) {
-	result, err := ParseMarkdownFile("websites.md")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(result["a: alfred"])
+	// result, err := ParseMarkdownFile("websites.md")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	fmt.Println("test")
 }

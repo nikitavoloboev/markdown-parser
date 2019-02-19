@@ -13,14 +13,26 @@ import (
 )
 
 // ParseLinkWithDescription parses a line and grabs the Link, Title and the Description attached to it.
-// The format of the line should be as follows: `- [Title](Link) - Description.
+// The format of the line should be as follows: `- [Title](Link) - Description`.
 // Description can be omitted.
-func ParseLinkWithDescription(line string) {
-	re := regexp.MustCompile(`\[([^]]+)\]\(([^)]+)\)(.*)`)
+func ParseLinkWithDescription(line string) map[string]string {
+	// Holds all the title, link, and description
+	m := make(map[string]string)
+
+	// Regex to extract title, link, and description
+	re := regexp.MustCompile(`(?m)^- \[([^]]+)\]\(([^)]+)\) - (.+)$`)
+
+	// Make regex
 	match := re.FindStringSubmatch(line)
-	if len(match) != 0 {
-		fmt.Printf(match[0])
+
+	// TODO: Replace with a check function to make sure if the format of the line was correct
+	if len(match) == 4 {
+		m["Title"] = match[1]
+		m["Link"] = match[2]
+		m["Description"] = match[3]
 	}
+
+	return m
 }
 
 // GetAllLinks returns all links and their names from a given markdown file.
