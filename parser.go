@@ -37,6 +37,23 @@ func ParseLink(line string) map[string]string {
 	return m
 }
 
+// ParseImageLink parses an image line and grabs the Link attached to it.
+// The format of the line should be as follows: `![](Link)`.
+func ParseImageLink(line string) string {
+	// Regex to extract title, link, and description
+	re := regexp.MustCompile(`(?m)(^!\[\]\(([^)]+)\))?`)
+
+	// Make regex
+	match := re.FindStringSubmatch(line)
+
+	link := ""
+	if len(match) == 3 {
+		link = match[2]
+	}
+
+	return link
+}
+
 // GetAllLinks returns all links and their names from a given markdown file.
 func GetAllLinks(markdown string) map[string]string {
 	// Holds all the links and their corresponding values

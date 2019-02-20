@@ -29,6 +29,19 @@ func TestParseLink(t *testing.T) {
 	assert.Equal(result3["Description"], "", "3. Check to see if the description is correct")
 }
 
+func TestParseImageLink(t *testing.T) {
+	// Define assertion
+	assert := assert.New(t)
+	// 1. Image link
+	v := "![](https://i.imgur.com/ZVPjkzh.png)"
+	result := ParseImageLink(v)
+	assert.Equal(result, "https://i.imgur.com/ZVPjkzh.png", "1. Check to see if the image link is correct")
+	// 4. Random text
+	v2 := "blargh"
+	result2 := ParseImageLink(v2)
+	assert.Equal(result2, "", "2. Check to see if the image link is correct")
+}
+
 func TestParseMarkdownFile(t *testing.T) {
 	// result, err := ParseMarkdownFile("websites.md")
 	// if err != nil {
