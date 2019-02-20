@@ -20,7 +20,7 @@ func ParseLink(line string) map[string]string {
 	m := make(map[string]string)
 
 	// Regex to extract title, link, and description
-	re := regexp.MustCompile(`(?m)(^- \[([^]]+)\]\(([^)]+)\) ?-? ?(.*)?)?(^!\[\]\(([^)]+)\))?`)
+	re := regexp.MustCompile(`(?m)(^- \[([^]]+)\]\(([^)]+)\) ?-? ?(.*)?)?`)
 
 	// Make regex
 	match := re.FindStringSubmatch(line)
@@ -28,16 +28,30 @@ func ParseLink(line string) map[string]string {
 	m["Title"] = ""
 	m["Link"] = ""
 	m["Description"] = ""
-	if len(match) == 7 {
+	if len(match) == 5 {
 		m["Title"] = match[2]
 		m["Link"] = match[3]
 		m["Description"] = match[4]
-		if match[6] != "" {
-			m["Link"] = match[6]
-		}
 	}
 
 	return m
+}
+
+// ParseImageLink parses an image line and grabs the Link attached to it.
+// The format of the line should be as follows: `![](Link)`.
+func ParseImageLink(line string) string {
+	// Regex to extract title, link, and description
+	re := regexp.MustCompile(`(?m)(^!\[\]\(([^)]+)\))?`)
+
+	// Make regex
+	match := re.FindStringSubmatch(line)
+
+	link := ""
+	if len(match) == 3 {
+		link = match[2]
+	}
+
+	return link
 }
 
 // GetAllLinks returns all links and their names from a given markdown file.
