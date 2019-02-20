@@ -21,12 +21,18 @@ func TestParseLink(t *testing.T) {
 	assert.Equal(result2["Title"], "Effective Go", "2. Check to see if the title is correct")
 	assert.Equal(result2["Link"], "https://golang.org/doc/effective_go.html", "2. Check to see if the link is correct")
 	assert.Equal(result2["Description"], "", "2. Check to see if the description is correct")
-	// 3. Random text
-	v3 := "blargh"
+	// 3. Image link
+	v3 := "![](https://i.imgur.com/ZVPjkzh.png)"
 	result3 := ParseLink(v3)
 	assert.Equal(result3["Title"], "", "3. Check to see if the title is correct")
-	assert.Equal(result3["Link"], "", "3. Check to see if the link is correct")
+	assert.Equal(result3["Link"], "https://i.imgur.com/ZVPjkzh.png", "3. Check to see if the link is correct")
 	assert.Equal(result3["Description"], "", "3. Check to see if the description is correct")
+	// 4. Random text
+	v4 := "blargh"
+	result4 := ParseLink(v4)
+	assert.Equal(result4["Title"], "", "4. Check to see if the title is correct")
+	assert.Equal(result4["Link"], "", "4. Check to see if the link is correct")
+	assert.Equal(result4["Description"], "", "4. Check to see if the description is correct")
 }
 
 func TestParseMarkdownFile(t *testing.T) {

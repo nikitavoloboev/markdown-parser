@@ -20,7 +20,7 @@ func ParseLink(line string) map[string]string {
 	m := make(map[string]string)
 
 	// Regex to extract title, link, and description
-	re := regexp.MustCompile(`(?m)(^- \[([^]]+)\]\(([^)]+)\) ?-? ?(.*)?)?`)
+	re := regexp.MustCompile(`(?m)(^- \[([^]]+)\]\(([^)]+)\) ?-? ?(.*)?)?(^!\[\]\(([^)]+)\))?`)
 
 	// Make regex
 	match := re.FindStringSubmatch(line)
@@ -28,10 +28,13 @@ func ParseLink(line string) map[string]string {
 	m["Title"] = ""
 	m["Link"] = ""
 	m["Description"] = ""
-	if len(match) == 5 {
+	if len(match) == 7 {
 		m["Title"] = match[2]
 		m["Link"] = match[3]
 		m["Description"] = match[4]
+		if match[6] != "" {
+			m["Link"] = match[6]
+		}
 	}
 
 	return m
