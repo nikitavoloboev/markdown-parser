@@ -1,4 +1,4 @@
-# Markdown Parser [![GoDoc](https://img.shields.io/badge/-GoDoc-0a0a0a.svg?style=flat&colorA=0a0a0a)](https://godoc.org/github.com/nikitavoloboev/markdown-parser) [![Thanks](http://bit.ly/saythankss)](https://patreon.com/nikitavoloboev)
+# Markdown Parser [![GoDoc](https://img.shields.io/badge/-GoDoc-0a0a0a.svg?style=flat&colorA=0a0a0a)](https://godoc.org/github.com/nikitavoloboev/markdown-parser) [![Build Status](https://img.shields.io/travis/nikitavoloboev/markdown-parser/master.svg?style=flat&colorA=0a0a0a)](https://travis-ci.org/nikitavoloboev/markdown-parser) [![Thanks](http://bit.ly/saythankss)](https://patreon.com/nikitavoloboev)
 
 > Go library to parse markdown to grab various things
 
