@@ -1,16 +1,24 @@
 # Contributing to Markdown Parser
-There are many ways you can contribute. You can:
-- Make suggestions and file bugs in [Issues](../../issues/).
-- Fix issues and add features with [Pull Requests](../../pulls/).
 
-## Sending PRs
-1. Fork repo
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Create new Pull Request
+Thank you for taking the time to contribute! ♥️
 
-## Submitting a Pull Request
-Please go through [existing issues](../../issues/) and [pull requests](../../pulls/) to check if somebody else is already working on the issue.
+You can:
 
-#### Thank you for taking the time to contribute! 💜
+- Submit [bug reports or feature requests](../../issues/new/choose)
+- Fix [open issues](../../issues) and [create PRs](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+- Improve documentation, the code and more! These are just some ideas.
+
+## Dependencies
+
+To run the project:
+
+1. Clone the repo (`git clone https://github.com/nikitavoloboev/alfred-learn-anything`)
+2. `go get` the dependencies used. Edit the code & run it!
+
+Have fun! 🚀
+
+## Opening PRs
+
+Please search [existing issues](../../issues/) and [pull requests](../../pulls/) to check if somebody else is already working on the issue.
+
+Don't be afraid to ask questions, open issues for discussion or opening [Draft PRs](https://github.blog/2019-02-14-introducing-draft-pull-requests/) with code.
