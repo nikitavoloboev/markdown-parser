@@ -12,7 +12,7 @@ You can:
 
 To run the project:
 
-1. Clone the repo (`git clone https://github.com/nikitavoloboev/alfred-learn-anything`)
+1. Clone the repo (`git clone https://github.com/nikitavoloboev/markdown-parser`)
 2. `go get` the dependencies used. Edit the code & run it!
 
 Have fun! 🚀
